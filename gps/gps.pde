@@ -83,7 +83,7 @@ void setup()
   pinMode(13, OUTPUT);
 
   // connect to the GPS at the desired rate
-  Serial1.begin(GPSRATE);
+  Serial.begin(GPSRATE);
  
    digitalWrite(powerpin, LOW);         // pull low to turn on!
 } 
@@ -616,7 +616,7 @@ void readline(void) {
   
   buffidx = 0; // start at begninning
   while (1) {
-      c=Serial1.read();
+      c=Serial.read();
       if (c == -1)
         continue;
       if (c == '\n')
